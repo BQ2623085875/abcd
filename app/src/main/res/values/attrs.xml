@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--标题-->
+    <declare-styleable name="HeaderTitleView">
+        <attr name="title_text" format="string" />
+        <attr name="goods_type" format="boolean" />
+        <attr name="goods_status" format="boolean" />
+        <attr name="check_type" format="boolean" />
+        <attr name="access_type" format="boolean" />
+        <attr name="take_type" format="boolean" />
+        <attr name="scan_button" format="boolean" />
+        <attr name="unusual_button" format="boolean" />
+        <attr name="search_edit" format="boolean" />
+        <attr name="flight_number_search_edit" format="boolean" />
+        <attr name="waybill_number_search_edit" format="boolean" />
+        <attr name="edit_number" format="boolean" />
+        <attr name="switch_already_part" format="boolean" />
+        <attr name="date_view" format="boolean" />
+        <attr name="another_date_view" format="boolean" />
+        <attr name="common_text" format="string" />
+        <attr name="back_button" format="boolean"></attr>
+        <attr name="switch_off_text" format="string"></attr>
+        <attr name="switch_on_text" format="string"></attr>
+    </declare-styleable>
+</resources>

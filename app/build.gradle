@@ -1,0 +1,136 @@
+plugins {
+    id 'com.android.application'
+}
+
+apply from: "../location.gradle"
+apply plugin: 'com.huawei.agconnect'
+
+//获取local.properties的内容
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.example.terminal"
+        minSdkVersion 23
+        targetSdkVersion 29
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters "armeabi-v7a"
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+//    signingConfigs {
+//        config {
+//            storeFile file(properties.getProperty("keystroe_storeFile"))
+//            storePassword properties.getProperty("keystroe_storePassword")
+//            keyAlias properties.getProperty("keystroe_keyAlias")
+//            keyPassword properties.getProperty("keystroe_keyPassword")
+//        }
+//    }
+
+    flavorDimensions "main"
+
+    // 配置多渠道打包
+    productFlavors {
+        // 仲集测试
+        dev {
+            // 指定版本
+            versionCode envInfo.dev.versionCode
+            versionName envInfo.dev.versionName
+            flavorDimensions "main"
+            buildConfigField("Integer", "Type", "1")
+
+            // 动态修改 常量 字段
+            buildConfigField "String", "BASE_URL", "\"${envInfo.dev.baseUrl}\""
+            buildConfigField "String", "WEB_SOCKET_URL", "\"${envInfo.dev.WebSocketUrl}\""
+            buildConfigField "String", "Port", "\"${envInfo.dev.Prot}\""
+            buildConfigField "String", "Station", "\"${envInfo.dev.Station}\""
+            resValue "string", "app_name", "\"${envInfo.dev.AppName}\""
+        }
+    }
+
+//    buildTypes {
+//        debug {
+//            //使用config签名
+//            signingConfig signingConfigs.config
+//
+//            // debug模式下，显示log
+//            buildConfigField("boolean", "LOG_DEBUG", "true")
+//
+//            // 不开启混淆
+//            minifyEnabled false
+//        }
+//
+//        release {
+//            //使用config签名
+//            signingConfig signingConfigs.config
+//            // release模式下，不显示log
+//            buildConfigField("boolean", "LOG_DEBUG", "false")
+//            // 不开启混淆
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//        }
+//    }
+
+    //打包重命名
+    applicationVariants.all {
+        variant ->
+            variant.outputs.all {
+                output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        outputFileName = "TERMINAL_C${variant.productFlavors[0].versionCode}_N${variant.productFlavors[0].versionName}_D${new Date().format("MM-dd", TimeZone.getTimeZone("UTC"))}_${variant.flavorName}-${variant.buildType.name}.apk"
+                    }
+            }
+    }
+}
+
+dependencies {
+    api 'androidx.appcompat:appcompat:1.2.0'
+    api 'com.google.android.material:material:1.2.1'
+    //图片选择
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.5.8'
+    //华为扫码
+    implementation 'com.huawei.hms:scanplus:2.0.0.300'
+    // 下拉刷新,上拉加载更多
+    api 'com.lcodecorex:tkrefreshlayout:1.0.7'
+    // 日期选择
+    api 'com.contrarywind:Android-PickerView:4.1.9'
+    // 网络请求
+    api 'com.lzy.net:okgo:3.0.4'
+    // 解析Json数据
+    implementation 'com.google.code.gson:gson:2.7'
+    // 动态申请权限
+    implementation 'com.hjq:xxpermissions:5.5'
+    // 图片加载
+    implementation 'com.github.bumptech.glide:glide:4.5.0'
+    // 视频播放
+    implementation 'cn.jzvd:jiaozivideoplayer:6.2.12'
+    // 语音合成
+    implementation files('libs\\usc.jar')
+    // 长链接
+    implementation "org.java-websocket:Java-WebSocket:1.4.0"
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.1'
+
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+}

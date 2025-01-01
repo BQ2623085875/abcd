@@ -1,0 +1,552 @@
+<resources>
+
+    <string name="app_english_name">Integrated freight management platform</string>
+    <string name="login_user_hint">请输入用户名</string>
+    <string name="login_password_hint">请输入密码</string>
+    <string name="button_login">登录</string>
+    <string name="button_remember_password">记住密码</string>
+
+    <string name="text_change_password">修改密码</string>
+    <string name="text_original_password">原密码</string>
+    <string name="text_new_password">新密码</string>
+    <string name="text_confirm_password">确认密码</string>
+    <string name="is_change_password">是否确认修改密码</string>
+
+    <string name="original_password_hint">请输入原密码</string>
+    <string name="new_password_hint">请输入新密码</string>
+    <string name="confirm_password_hint">再次输入新密码</string>
+    <string name="is_password">两次密码不一致</string>
+
+
+    <string name="toast_user_empty">请输入用户名</string>
+    <string name="toast_password_empty">请输入密码</string>
+    <string name="toast_password_error">密码错误，请重新输入</string>
+    <string name="toast_please_select_order">请选择运单</string>
+    <string name="toast_select_order_one">当前操作只能选择一个运单</string>
+    <string name="toast_select_order_no_one">组板操作至少选择两个运单</string>
+    <string name="toast_check_count_null">请输入抽检件数</string>
+    <string name="toast_check_count_max">抽检件数不得大于运单件数</string>
+    <string name="toast_check_route_null">请选择安检通道</string>
+
+    <string name="toast_now_select">当前已选择</string>
+    <string name="toast_now_not_select">条运单，未选择</string>
+    <string name="toast_confirm_take">条运单，是否确认提货？</string>
+    <string name="toast_picking_not_all">不支持部分运单提货</string>
+    <string name="toast_confirm_application">条运单，是否确认申请事故签证？</string>
+    <string name="toast_please_select_area">请选择区域</string>
+    <string name="toast_please_content">请选择内容</string>
+
+    <string name="toast_weighbridge_route_null">请选择地磅通道</string>
+    <string name="toast_storage_area_null">请选择存放区域</string>
+    <string name="toast_weight_null">请输入重量</string>
+    <string name="toast_weight_negative">重量不能为负数，请修改</string>
+    <string name="toast_number_null">请输入件数</string>
+    <string name="toast_volume_null">请输入体积</string>
+    <string name="toast_length_null">请输入长度</string>
+    <string name="toast_wide_null">请输入宽度</string>
+    <string name="toast_height_null">请输入高度</string>
+    <string name="toast_selected">当前条目已锁定，如需操作，请先长按解锁</string>
+    <string name="toast_net_error">当前网络不可用，请检查网络</string>
+    <string name="toast_print_success">打印机调用成功</string>
+    <string name="toast_select_delivery_null">请选择要交接的运单</string>
+
+    <string name="toast_container_type_null">请选择容器类型</string>
+    <string name="toast_container_no_null">请选择容器编号</string>
+    <string name="toast_pallet_no_null">请选择托盘编号</string>
+    <string name="toast_pallet_select_double">请重新选择托盘</string>
+    <string name="toast_container_null">集装器数据错误</string>
+    <string name="toast_tug_null">拖斗数据错误</string>
+    <string name="toast_count_null">请输入件数</string>
+    <string name="toast_content_null">请输入内容</string>
+    <string name="toast_storeroom_inventory_data_null">请等待数据加载完成</string>
+    <string name="toast_container_volume_null">请输入拖斗体积</string>
+    <string name="toast_save_ing">有内容保存中，请稍后</string>
+    <string name="toast_tug_double">容器编号与库内拖斗编号重复，请修改</string>
+    <string name="toast_container_double">容器编号与库内集装器编号重复，请修改</string>
+    <string name="toast_pallet_double">容器编号与库内托盘编号重复，请修改</string>
+    <string name="toast_weighting_weight_null">请输入称重重量</string>
+
+    <string name="text_version_name">版本号</string>
+
+    <string name="button_scan">扫描</string>
+    <string name="button_unusual">异常</string>
+    <string name="button_back">返回</string>
+    <string name="button_signed_take_goods">签字提货</string>
+    <string name="button_application_receipt">事故签证</string>
+    <string name="button_piking_confirm">确认提货</string>
+    <string name="button_piking_channel">确认分配</string>
+    <string name="button_take_goods">提货</string>
+    <string name="button_save">保存</string>
+    <string name="button_submit">提交</string>
+    <string name="button_all_submit">全部提交</string>
+    <string name="button_revise">修改</string>
+    <string name="button_issue">出库</string>
+    <string name="button_revise_check">修改复核</string>
+    <string name="button_remove_board">拆板</string>
+    <string name="button_group_merge">合板</string>
+    <string name="button_group_sort">排序</string>
+
+    <string name="button_add_goods">新增货物</string>
+    <string name="button_add_item">新增条目</string>
+
+    <string name="text_unusual_type">异常类型</string>
+    <string name="text_unusual_gradle">异常等级</string>
+    <string name="text_unusual_count">异常件数</string>
+    <string name="text_unusual_remarks">异常备注</string>
+    <string name="text_unusual_photo">异常照片</string>
+    <string name="text_create_person">创建人</string>
+
+    <string name="text_sender">托运人</string>
+    <string name="text_sender_address">托运人地址</string>
+    <string name="text_receiver">收货人</string>
+    <string name="text_receiver_address">收货人地址</string>
+    <string name="text_accident_product_name">受损品名</string>
+    <string name="text_accident_count">* 受损件数</string>
+    <string name="text_accident_weight">* 受损重量</string>
+    <string name="text_declared_value">声明价值</string>
+    <string name="text_insurance_value">保险价值</string>
+    <string name="text_inspection_condition">* 验视情况</string>
+    <string name="text_treatment">* 处理情况</string>
+    <string name="text_accident_type">* 事故类别</string>
+    <string name="text_accident_type_lose">丢失</string>
+    <string name="text_accident_type_spoil">损坏</string>
+    <string name="text_accident_type_lack">短少</string>
+    <string name="text_accident_type_deterioration">变质</string>
+    <string name="text_accident_type_contaminated">污染</string>
+    <string name="text_other">其他</string>
+
+    <string name="toast_accident_count_null">受损件数不能为空</string>
+    <string name="toast_accident_weight_null">受损重量不能为空</string>
+    <string name="toast_inspection_condition_null">验视情况不能为空</string>
+    <string name="toast_treatment_null">处理情况不能为空</string>
+    <string name="toast_accident_type_null">至少选择一项事故类别</string>
+
+    <string name="text_blank_record">空白记录</string>
+
+    <string name="switch_off_already">已</string>
+    <string name="switch_on_part">待</string>
+
+    <string name="text_read">已读</string>
+    <string name="text_unread">未读</string>
+    <string name="text_fetch">读取</string>
+    <string name="text_message_type">消息类型</string>
+    <string name="text_message_info">消息内容</string>
+    <string name="text_message_sender">发送人</string>
+    <string name="text_message_send_time">发送时间</string>
+    <string name="text_operation_info">操作信息</string>
+    <string name="text_create_new">新建</string>
+    <string name="text_create_time">录单时间</string>
+
+    <string name="switch_no_channel">待分通道</string>
+    <string name="switch_take_already">已提货</string>
+    <string name="switch_take_part">待提货</string>
+    <string name="switch_picking_already">已</string>
+    <string name="switch_picking_part">待</string>
+
+    <string name="hint_please_input">请输入</string>
+    <string name="hint_please_select">请选择</string>
+
+    <string name="spinner_select">--请选择--</string>
+    <string name="text_not_precious">非贵重物品</string>
+    <string name="text_precious">贵重物品</string>
+    <string name="text_not_dangerous">非危险品</string>
+    <string name="text_dangerous">危险品</string>
+
+    <string name="text_normal">正常</string>
+    <string name="text_torn">破损</string>
+    <string name="text_shortage">少收</string>
+    <string name="text_overcharge">多收</string>
+
+    <string name="text_tug_nos">拖斗无需选择托盘</string>
+
+    <string name="text_be_verified">待审核</string>
+    <string name="text_fail">未通过</string>
+    <string name="text_passed">已通过</string>
+
+    <string name="text_tug">拖斗</string>
+    <string name="text_container">集装器</string>
+    <string name="text_custom_tug">自定义拖斗</string>
+    <string name="text_custom_pallet">自定义托盘</string>
+    <string name="text_add_container">自定义集装器</string>
+
+    <string name="text_finish">完成</string>
+    <string name="text_not_finish">未完成</string>
+    <string name="text_not">无</string>
+    <string name="text_have">有</string>
+    <string name="text_photo">拍照</string>
+    <string name="text_video">视频</string>
+
+    <string name="title_enter_port_guarantee">进港保障</string>
+    <string name="title_enter_port_warehousing">进港入库</string>
+    <string name="title_enter_port_take_goods">进港提货</string>
+    <string name="title_enter_port_picking_goods">进港提货</string>
+    <string name="title_enter_port_take_goods_details">提货详情</string>
+    <string name="title_enter_port_channeling">分配通道</string>
+    <string name="title_enter_port_picking_goods_details">提货详情</string>
+    <string name="title_enter_port_inventory">进港盘库</string>
+    <string name="title_enter_port_handover">进港交接</string>
+    <string name="title_order_unusual">货物异常</string>
+    <string name="title_blank_container_in">空板入库</string>
+    <string name="title_blank_container_out">空板出库</string>
+    <string name="title_write_nfc">标签写入</string>
+
+    <string name="title_leave_port_guarantee">出港保障</string>
+    <string name="title_leave_port_collect_check">收运核查</string>
+    <string name="title_leave_port_warehousing">出港入库</string>
+    <string name="title_leave_port_check">出港复核</string>
+    <string name="title_leave_port_group_board">出港组板</string>
+    <string name="title_leave_port_duplicate">出港复重</string>
+    <string name="title_leave_port_return">出港退运</string>
+    <string name="title_enter_port_express_delivery">快件交接</string>
+    <string name="title_leave_port_weighing">出库称重</string>
+    <string name="title_leave_port_handover">出港交接</string>
+    <string name="title_leave_port_inventory">出港盘库</string>
+
+    <string name="title_user_manager">用户管理</string>
+    <string name="title_user_login_out">退出登录</string>
+
+    <string name="title_see_pic">查看图片</string>
+    <string name="title_not_inventory_count">未盘运单数</string>
+    <string name="title_inventory_person">盘库人</string>
+    <string name="title_inventory_time">盘库时间</string>
+    <string name="title_inventory_result">盘库结果</string>
+    <string name="title_inventory_count">盘库件数</string>
+    <string name="title_inventory_status">盘库状态</string>
+    <string name="title_status">状态</string>
+
+    <string name="text_storeroom_order">库存运单</string>
+    <string name="text_storeroom_more">多收</string>
+    <string name="text_storeroom_less">少收</string>
+
+    <string name="text_check_part">待核</string>
+    <string name="text_check_already">已核</string>
+
+    <string name="hint_search">搜索内容</string>
+    <string name="text_cancel">取消</string>
+    <string name="text_confirm">确定</string>
+    <string name="text_reset">重签</string>
+    <string name="text_resetting">重置</string>
+    <string name="text_neglect">忽略</string>
+    <string name="text_add">新建</string>
+
+    <string name="text_device_not_nfc">该设备不支持NFC</string>
+    <string name="text_nfc_close">请先在设置打开NFC权限</string>
+    <string name="text_nfc_scan_ing">NFC扫描中···</string>
+    <string name="text_scan_stop">取消扫描</string>
+
+    <string name="text_collect">收运</string>
+    <string name="text_refuse">拒绝</string>
+
+    <string name="text_warehoused">已入库</string>
+    <string name="text_gross_weight">毛重</string>
+    <string name="text_tug_weight">斗重</string>
+    <string name="text_pallet_weight_text">盘重</string>
+    <string name="text_container_count">斗数</string>
+    <string name="text_net__weight">净重</string>
+    <string name="text_error_rate">误差率</string>
+    <string name="text_error">误差</string>
+    <string name="text_goods_gross_weight">货物毛重</string>
+    <string name="text_goods_duplicate_weight">复重总重</string>
+    <string name="text_container_weight">容器重量</string>
+    <string name="text_pallet_weight">托盘重量</string>
+    <string name="text_container_in_count">所属容器数</string>
+    <string name="text_percent">%</string>
+
+    <string name="text_uld_no">集装器编号</string>
+    <string name="text_uld_weight">集装器重量</string>
+    <string name="text_custom_no">自定义编号</string>
+    <string name="text_custom_weight">自定义重量</string>
+
+    <string name="text_unusual_status">异常状态</string>
+
+    <string name="dialog_user_login_out">退出后不会再接收到相关信息，是否确定退出？</string>
+    <string name="dialog_confirm_delete">是否确认删除该条图片？</string>
+    <string name="dialog_confirm_route_delete">是否确认删除当前安检通道？</string>
+    <string name="dialog_leave_port_return">是否确认退运该票货物？</string>
+    <string name="dialog_enter_port_express_delivery">是否确认交接货物？</string>
+    <string name="dialog_remove_goods_info">是否确认删除该条货物信息？</string>
+    <string name="dialog_remove_storage_info">是否确认删除该条货物存放信息？</string>
+    <string name="dialog_remove_container_info">是否确认删除该条拖斗信息？</string>
+    <string name="dialog_confirm_submit_warehousing_info">是否确认将当前已选运单提交入库？</string>
+    <string name="dialog_confirm_submit_all_warehousing_info">是否确认将当前航班所有运单提交入库？</string>
+    <string name="dialog_confirm_save_warehousing_info">是否确认保存当前入库信息？</string>
+    <string name="dialog_confirm_submit_group_board_info">是否确认提交当前组板信息？</string>
+    <string name="dialog_confirm_save_group_board_info">是否确认保存当前组板信息？</string>
+    <string name="dialog_confirm_submit_group_board_shipping_info">是否确认当前航班已组板完成？</string>
+    <string name="dialog_confirm_submit_duplicate_info">是否确认提交当前复重信息？</string>
+    <string name="dialog_confirm_submit_leave_check_info">是否确认提交当前核查信息？</string>
+    <string name="dialog_confirm_save_duplicate_info">是否确认保存当前复重信息？</string>
+    <string name="dialog_confirm_submit_check_info">是否确认提交当前核查信息？</string>
+    <string name="dialog_confirm_submit_storeroom_info">是否确认提交当前盘库信息？</string>
+    <string name="dialog_confirm_take">是否确认提货？</string>
+    <string name="dialog_message_title">有新消息提醒</string>
+    <string name="dialog_delete_unusual">是否确认删除该条异常？</string>
+    <string name="dialog_delete_blank_in_container">是否确认删除该板入库信息？</string>
+    <string name="dialog_delete_blank_out_container">是否确认删除该板出库信息？</string>
+    <string name="dialog_application_receipt_submit">是否确认提交事故签证？</string>
+    <string name="dialog_confirm_delete_blank">是否确认删除该条空白运单？</string>
+    <string name="dialog_confirm_picking">是否确认提货？</string>
+    <string name="dialog_confirm_channel">是否确认分配提货通道？</string>
+    <string name="dialog_reset_channel">是否确认修改提货通道？</string>
+    <string name="dialog_wide_body">当前航班为宽体机，请注意使用集装器装载货物。</string>
+    <string name="dialog_confirm_submit_weighing_info">是否确认提交当前称重信息？</string>
+    <string name="dialog_installation_sign_print">是否远程打印装机指示牌？</string>
+
+    <string name="text_add_manifest">新增舱单</string>
+
+    <string name="text_flight_number">航班号</string>
+    <string name="text_flight_date">航班日期</string>
+    <string name="text_date">日期</string>
+    <string name="text_enter_port_real_fall_time">进港实落</string>
+    <string name="text_leave_port_plan_time">计起时间</string>
+    <string name="text_etd">预起时间</string>
+    <string name="text_route_line">航线</string>
+    <string name="text_air_number">机号</string>
+    <string name="text_deap">目的站</string>
+    <string name="text_will_down">降落地</string>
+    <string name="text_number_packages">件数</string>
+    <string name="text_weight">重量</string>
+    <string name="text_goods_weight">货物重量</string>
+    <string name="text_goods_query">货物查询</string>
+    <string name="text_goods_count">货物件数</string>
+    <string name="text_order_count">运单数量</string>
+    <string name="text_order_number">运单件数</string>
+    <string name="text_order_weight">运单重量</string>
+    <string name="text_order_type">运单类型</string>
+    <string name="text_return_number">退运件数</string>
+    <string name="text_picking_count">出库件数</string>
+    <string name="text_return_weight">退运重量</string>
+    <string name="text_weighting_weight">称重重量</string>
+    <string name="text_picking_total_count">出库总件数</string>
+    <string name="text_real_number">实到件数</string>
+    <string name="text_real">实到</string>
+    <string name="text_total_number_packages">总件数</string>
+    <string name="text_floor_capacity">地板承受力</string>
+    <string name="text_total_weight">总重量</string>
+    <string name="text_note_weight">运单重量</string>
+    <string name="text_real_weight">实到重量</string>
+    <string name="text_net_weight">净重</string>
+    <string name="text_pre_plan_weight">预配重量</string>
+    <string name="text_pre_plan_packages">预配件数</string>
+    <string name="text_pre_plan_waybill_count">预配运单数</string>
+    <string name="text_pre_plan_personnel">预配人</string>
+    <string name="text_group_board_personnel">组板人</string>
+    <string name="text_group_board_duplicate">复重人</string>
+    <string name="text_take_tabulation_person">制表人</string>
+    <string name="text_take_tabulation_time">制表时间</string>
+    <string name="text_check_person">复核人</string>
+    <string name="text_outbound_person">出库人</string>
+    <string name="text_stevedores_person">装卸人</string>
+    <string name="text_tonnage_control_person">吨控复核</string>
+    <string name="text_recording_over">录单完毕</string>
+    <string name="text_order_no">货邮单号</string>
+    <string name="text_order_non">运单号</string>
+    <string name="text_order_total">运单合计</string>
+    <string name="text_product_weight">货邮重量</string>
+    <string name="text_product_type">货邮类型</string>
+    <string name="text_take_goods_waybill_number">提货单号</string>
+    <string name="text_product_name">品名</string>
+    <string name="text_packing">包装</string>
+    <string name="text_receiving_personnel">收货人</string>
+    <string name="text_take_goods_personnel">提货人</string>
+    <string name="text_take_goods_channel">提货通道</string>
+    <string name="text_take_goods_door">提货口</string>
+    <string name="text_picking_goods_personnel">出库人</string>
+    <string name="text_take_goods_time">提货时间</string>
+    <string name="text_picking_goods_time">出库时间</string>
+    <string name="text_take_goods_personnel_id">提货人证件号</string>
+    <string name="text_take_goods_personnel_photo">提货人照片</string>
+    <string name="text_drawer_personnel">开单人</string>
+    <string name="text_drawer_time">开单时间</string>
+    <string name="text_starting_station">始发站</string>
+    <string name="text_flight_start_station">航班号/始发站</string>
+    <string name="text_destination">目的地</string>
+    <string name="text_odd_status">状态</string>
+    <string name="text_stevedores_personnel">装卸人</string>
+    <string name="text_handover_time">交接时间</string>
+    <string name="text_position_text">序</string>
+    <string name="text_remarks">备注</string>
+    <string name="text_consignor_person">发货人</string>
+    <string name="text_storage_area">存放区域</string>
+    <string name="text_landing_time">落地时间</string>
+    <string name="text_handover_manager">交接库管</string>
+    <string name="text_handover_driver_sign">交接司机签字</string>
+    <string name="text_tally_manager">分拣库管</string>
+    <string name="text_tally_time">分拣时间</string>
+    <string name="text_tug_number">斗号</string>
+    <string name="text_tug_no">拖斗编号</string>
+    <string name="text_weighbridge_route">地磅通道</string>
+    <string name="text_take_route">提货通道</string>
+    <string name="text_warehousing_route">入库通道</string>
+    <string name="text_volume">体积</string>
+    <string name="text_total_volume">总体积</string>
+    <string name="text_kg">KG</string>
+    <string name="text_kg_m">KG / m²</string>
+    <string name="text_piece">件</string>
+    <string name="text_m">m³</string>
+    <string name="text_cm">Cm</string>
+    <string name="text_print">打印</string>
+    <string name="text_warehousing_time">入库时间</string>
+    <string name="text_collect_check_time">核查时间</string>
+    <string name="text_collect_check_photo">抽检图片</string>
+    <string name="text_volume_resolve">长/宽/高</string>
+    <string name="text_length">长</string>
+    <string name="text_wide">宽</string>
+    <string name="text_height">高</string>
+    <string name="text_remove_length">分板长度</string>
+    <string name="text_remove_wide">分板宽度</string>
+    <string name="text_remove_height">分板高度</string>
+    <string name="text_act_shape">（宽）</string>
+    <string name="text_weighing_time">称重时间</string>
+    <string name="text_weighing_person">称重人</string>
+    <string name="text_delivery_confirm">确认交接</string>
+    <string name="text_priority">优先级</string>
+
+    <string name="text_task_bag">任务袋</string>
+    <string name="text_task">任务指派单</string>
+    <string name="text_container_number">货物总斗数</string>
+    <string name="text_transport_time">拉运时间</string>
+    <string name="text_trans_warehousing_time">拉入库房时间</string>
+    <string name="text_driver_sign">司机签字</string>
+    <string name="text_delivery_sign">交接签字</string>
+    <string name="text_transport_container_number">拉运斗数</string>
+    <string name="text_transport_confirm_check">拉运前四确认检查</string>
+    <string name="text_transport_prevention_control">拉运途中安全防控</string>
+
+    <string name="toast_container_number_null">请输入货物总斗数</string>
+    <string name="toast_transport_container_number_null">请输入拉运斗数</string>
+    <string name="toast_transport_time_null">请选择拉运时间</string>
+    <string name="toast_trans_warehousing_time_null">请选择拉入库房时间</string>
+    <string name="toast_sign_file_null">请进行签字</string>
+
+    <string name="text_container_info">拖斗信息</string>
+    <string name="text_duplicate_info">复重信息</string>
+
+    <string name="text_collect_check_item">核查项</string>
+    <string name="text_collect_check_consent_status">是否通过</string>
+
+    <string name="text_inventory">盘库</string>
+
+    <string name="text_continue_inventory">继续盘库</string>
+    <string name="text_check_result">查看结果</string>
+
+    <string name="text_shipping_space">舱位信息</string>
+    <string name="text_shipping">舱位</string>
+    <string name="text_shipping_total">舱位合计</string>
+    <string name="text_container_type">容器类型</string>
+    <string name="text_container_no">容器编号</string>
+    <string name="text_pallet_no">托盘编号</string>
+    <string name="text_position_weight">装载位置及重量</string>
+
+    <string name="text_goods">货物</string>
+    <string name="text_mail">邮件</string>
+    <string name="text_official_goods">公务货</string>
+    <string name="text_total">总计</string>
+    <string name="text_retrieval_personnel">出库人</string>
+    <string name="text_duplicate_personnel">复重人</string>
+    <string name="text_retrieval_check_personnel">出库复核人</string>
+    <string name="text_tonnage_check_personnel">吨位复核人</string>
+    <string name="text_tabulator_personnel">制表人</string>
+    <string name="text_tabulator_time">制表时间</string>
+    <string name="text_operation">操作</string>
+    <string name="text_operation_area">操作区</string>
+    <string name="text_retrieval_order">出库单</string>
+    <string name="text_message">消息</string>
+
+    <string name="text_colon">:</string>
+    <string name="text_check_count">抽检件数</string>
+    <string name="text_check_info">抽检信息</string>
+
+    <string name="text_yes">是</string>
+    <string name="text_no">否</string>
+    <string name="text_not_applicable">不适用</string>
+
+    <string name="text_sport">···</string>
+    <string name="text_pull_off">卸</string>
+    <string name="text_transport">转</string>
+    <string name="text_prepare">备</string>
+    <string name="text_transport_batches">中转分批</string>
+
+    <string name="text_no_warehousing_count">0件/0件</string>
+    <string name="text_no_warehousing_weight">0KG/0KG</string>
+    <string name="toast_goods_one">容器内至少需要保留一个货物</string>
+    <string name="toast_storage_one">至少需要保留一个存放信息</string>
+
+    <string name="text_remove_board_count">分板件数</string>
+    <string name="text_remove_board_weight">分板重量</string>
+    <string name="text_remove_board_volume">分板体积</string>
+    <string name="toast_board_count_null">请输入分板件数</string>
+    <string name="toast_board_weight_null">请输入分板重量</string>
+    <string name="toast_board_volume_null">请输入分板体积</string>
+    <string name="toast_board_count_null_weight">分板件数为全部时，分板重量或分板体积不能为部分</string>
+    <string name="toast_board_weight_null_count">分板重量为全部时，分板件数或分板体积不能为部分</string>
+    <string name="toast_board_volume_null_count">分板体积为全部时，分板件数或分板重量不能为部分</string>
+    <string name="toast_board_count_min">分板件数不能大于原板件数</string>
+    <string name="toast_board_weight_min">分板重量不能大于原板重量</string>
+    <string name="toast_board_volume_min">分板重量不能大于原板体积</string>
+    <string name="toast_submit_success">提交成功</string>
+    <string name="toast_save_success">保存成功</string>
+    <string name="toast_apply_success">申请成功</string>
+    <string name="toast_warehousing_info_null">请选择要入库的运单</string>
+    <string name="toast_storage_many_order">存放区域不能多于运单件数</string>
+    <string name="toast_storage_many_null">请输入存放区域</string>
+    <string name="toast_error_route_error">误差率过大，当前货物不能出库</string>
+    <string name="toast_error_warehousing">入库信息与预配舱单信息误差过大，请检查入库信息</string>
+    <string name="toast_net_weight_negative">货物净重不能为负数，请修改</string>
+    <string name="toast_page_lock">已经有人保障当前条目</string>
+    <string name="toast_unusual_count_null">请输入异常件数</string>
+    <string name="toast_unusual_grade_null">请输入异常等级</string>
+    <string name="toast_unusual_not_delete">该异常已提交，不能修改</string>
+    <string name="toast_unusual_not_image">该异常没有上传照片</string>
+    <string name="toast_unusual_image_null">照片还未同步，请稍后点击查看</string>
+    <string name="toast_not_save_finish">未保存操作信息，是否确认退出？</string>
+    <string name="toast_upload_success">文件上传成功</string>
+    <string name="toast_nfc_card_null">当前标签没有内容</string>
+    <string name="toast_nfc_card_error">当前非本系统标签</string>
+    <string name="toast_take_channel_null">请选择提货通道</string>
+    <string name="toast_reset_success">修改成功</string>
+    <string name="toast_data_error">数据报错，请联系管理员</string>
+
+    <string name="toast_leave_port_tug_error">当前非出港容器标签</string>
+    <string name="toast_leave_port_area_error">当前非出港区域标签</string>
+    <string name="toast_leave_port_pallet_error">当前非出港托盘标签</string>
+
+    <string name="toast_item_selected">当前运单已经被锁定，不能删除</string>
+    <string name="toast_item_not_blank">当前运单非空白运单，不能删除</string>
+
+    <string name="text_download_ing">正在下载新版本...</string>
+    <string name="text_download_later">正在下载，请稍后...</string>
+    <string name="toast_download_error">下载失败，请检查网络。</string>
+    <string name="toast_download_start">开始后台下载更新文件...</string>
+    <string name="dialog_start_update">开始更新</string>
+
+    <string name="double_click_exit">再次点击退出应用</string>
+    <string name="text_loading">拼命加载中...请稍后...</string>
+    <string name="text_upload_loading">文件上传中...请稍后...</string>
+    <string name="toast_not_back">请更新至最新版</string>
+
+    <string name="toast_no_null">请输入编号</string>
+
+    <string name="text_change_error">转换异常</string>
+    <string name="net_error">网络请求失败</string>
+    <string name="net_api_back_error">接口信息</string>
+    <string name="net_data_empty">网络请求返回数据为空</string>
+    <string name="text_content_null">当前没有内容呦~</string>
+
+    <string name="text_type_column">类型 ：</string>
+    <string name="text_code_column">编号 ：</string>
+
+    <string name="text_pallet">托盘</string>
+    <string name="text_leave_in_channel">出港入库通道</string>
+    <string name="text_leave_out_channel">出港复重通道</string>
+    <string name="text_leave_storage">出港库房区域</string>
+    <string name="text_enter_out_channel">进港提货通道</string>
+    <string name="text_enter_storage">进港库房区域</string>
+
+    <string name="no_permission">您已拒绝授权，请移步至系统设置，权限页面修改权限，否则部分功能将无法正常使用</string>
+
+    <string name="text_listener_empty">监听接口OkGoBackListener不能为空，请检查代码</string>
+    <string name="text_nfc_read">标签读取</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

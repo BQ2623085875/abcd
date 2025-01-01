@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path name="image" path="image/" />
+    <external-path name="camera_photos" path="trans_camera" />
+    <external-path name="hzx" path="/hzxDownload" />
+</paths>
