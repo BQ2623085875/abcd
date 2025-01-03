@@ -2,6 +2,7 @@
 <resources>
     <color name="color_blue">#225BC6</color>
     <color name="color_blue_dark">#0E64C5</color>
+    <color name="color_blue_dark_80">#49AEEE</color>
     <color name="color_blue_trans_50">#8C0E64C5</color>
     <color name="color_blue_trans_30">#4D0E64C5</color>
 
@@ -10,18 +11,24 @@
 
     <color name="text_color">#353D61</color>
     <color name="black">#ff000000</color>
+    <color name="black_20">#33000000</color>
+    <color name="black_10">#1A000000</color>
 
     <color name="white">#ffffffff</color>
     <color name="white_trans_20">#33FFFFFF</color>
     <color name="white_trans_50">#80FFFFFF</color>
     <color name="color_fd">#FFDDDDDD</color>
+    <color name="color_fd_20">#33DDDDDD</color>
     <color name="color_80">#808080</color>
     <color name="color_8">#B6B2B2</color>
+    <color name="color_15">#26B6B2B2</color>
     <color name="editor_line">#470E63C6</color>
 
     <color name="color_yellow">#FFFF00</color>
     <color name="color_orange">#FF5722</color>
     <color name="color_green">#00FF00</color>
+    <color name="color_green100">#5A9049</color>
+    <color name="color_green20">#C2DBBB</color>
     <color name="color_red">#FF0000</color>
     <color name="color_red_dark">#99FF0000</color>
     <color name="color_red_tint">#33FF0000</color>

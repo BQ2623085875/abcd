@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_15"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".fragment.HomeFragment">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:background="@color/color_blue_dark_80"
+        android:gravity="center"
+        android:text="@string/text_menu"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/sp_18"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:orientation="horizontal">
+
+        <!--入库办理-->
+        <TextView
+            android:id="@+id/mTv_Store"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:drawableTop="@mipmap/user_header"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:text="@string/text_warehouse_entry_processing"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/sp_15" />
+        <!--出库办理-->
+        <TextView
+            android:id="@+id/mTv_Outbound"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:drawableTop="@mipmap/user_header"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:text="@string/text_outbound_processing"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/sp_15" />
+        <!--盘点管理-->
+        <TextView
+            android:id="@+id/mTv_Stocktaking"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:drawableTop="@mipmap/user_header"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:text="@string/text_inventory_management"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/sp_15" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_20"
+        android:orientation="horizontal">
+
+        <!--设备实施-->
+        <TextView
+            android:id="@+id/mTv_Device"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:drawableTop="@mipmap/user_header"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:text="@string/text_equipment_implementation"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/sp_15" />
+        <!--空的组件-->
+        <TextView
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:drawableTop="@mipmap/user_header"
+            android:gravity="center"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:text="@string/text_outbound_processing"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/sp_15"
+            android:visibility="invisible" />
+        <!--空的组件-->
+        <TextView
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:drawableTop="@mipmap/user_header"
+            android:gravity="center"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:text="@string/text_inventory_management"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/sp_15"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+</LinearLayout>

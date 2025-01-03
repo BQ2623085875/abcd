@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="@dimen/dp_80"
+    android:paddingTop="@dimen/dp_2"
+    android:layout_marginLeft="@dimen/dp_1"
+    android:layout_height="wrap_content">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mRvSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_blue_10"
+        android:paddingBottom="@dimen/dp_5"
+        android:paddingTop="@dimen/dp_3"/>
+</LinearLayout>

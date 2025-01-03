@@ -10,6 +10,7 @@ import com.example.terminal.global.MainApplication;
 import com.example.terminal.util.CommonUtils;
 import com.example.terminal.util.JsonUtils;
 import com.example.terminal.util.ProgressUtils;
+import com.example.terminal.util.SharedPreUtils;
 import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.Response;
 
@@ -70,7 +71,7 @@ public abstract class OkGoCallBackListener extends StringCallback {
                 URL url = httpurl.url();
                 String method = request.method();
 
-                CommonUtils.printJson("TAG--", response.body(), "--->" + method + "  URL: " + url);
+                CommonUtils.printJson("-OkGoCall-", response.body(), "--->" + method + "  URL: " + url);
 
                 CommonBean commonBean = JsonUtils.parseJsonToBean(response.body(), CommonBean.class);
 
@@ -79,6 +80,7 @@ public abstract class OkGoCallBackListener extends StringCallback {
                     onSuccess(response.body());
                 } else if (commonBean.getCode() == Constant.LOGIN_OUT) {
                     ConstantInfo.TOKEN = null;
+                    SharedPreUtils.putString("TOKEN","");
                     listener.onError();
                     listener.getActivity().turnToAct(LoginActivity.class);
                     MainApplication.finishActivity();

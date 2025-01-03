@@ -15,15 +15,12 @@ import android.widget.TextView;
 
 import com.example.terminal.R;
 import com.example.terminal.base.BaseDialog;
-import com.example.terminal.global.ConstantInfo;
-import com.example.terminal.http.NetworkUtils;
-import com.example.terminal.http.network.OkGoBackListener;
 import com.example.terminal.util.DensityUtils;
 
 
 /**
- * @author : YanKing
- * @date : 2019/5/19  9:53
+ * @author :
+ * @date :
  * @Description : 确定取消弹框
  */
 public class AlertDialog extends BaseDialog {
@@ -128,25 +125,6 @@ public class AlertDialog extends BaseDialog {
         mBtnConfirm.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (ConstantInfo.isReturn) {
-                    if (ConstantInfo.IDS) {
-                        NetworkUtils.securePageLock2(new OkGoBackListener((Activity) mContext) {
-                            @Override
-                            public void onSuccess(Object body) {
-                                ConstantInfo.isReturn = false;
-                                ConstantInfo.IDS = false;
-                            }
-                        }, ConstantInfo.ModuleID, ConstantInfo.StringID);
-                    } else {
-                        NetworkUtils.securePageLock(new OkGoBackListener((Activity) mContext) {
-                            @Override
-                            public void onSuccess(Object body) {
-                                ConstantInfo.isReturn = false;
-                                ConstantInfo.IDS = false;
-                            }
-                        }, ConstantInfo.ModuleID, ConstantInfo.ID);
-                    }
-                }
                 mDialog.dismiss();
                 listener.onClick(v);
             }

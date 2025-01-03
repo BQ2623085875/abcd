@@ -4,9 +4,53 @@
     android:id="@+id/mRlContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/icon_background"
-    android:orientation="horizontal"
+    android:fitsSystemWindows="true"
     tools:context=".activity.MainActivity">
 
+    <FrameLayout
+        android:id="@+id/mFl_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/mRg_main" />
+
+    <RadioGroup
+        android:paddingTop="@dimen/dp_5"
+        android:id="@+id/mRg_main"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dp_5">
+
+
+        <RadioButton
+            android:id="@+id/mRb_Home_main"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@mipmap/icon_user"
+            android:gravity="center"
+            android:text="@string/text_home"
+            android:textColor="@drawable/main_buttomtextcolor"
+            android:textSize="@dimen/sp_10" />
+
+        <RadioButton
+            android:id="@+id/mRb_My_main"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:checked="false"
+            android:drawableTop="@mipmap/icon_user"
+            android:gravity="center"
+            android:text="@string/text_my"
+            android:textColor="@drawable/main_buttomtextcolor"
+            android:textSize="@dimen/sp_10" />
+    </RadioGroup>
 
 </RelativeLayout>

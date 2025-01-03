@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingTop="@dimen/dp_5"
+    android:paddingBottom="@dimen/dp_10">
+
+    <TextView
+        android:id="@+id/mTv_Return"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shape_butto_frame_grey_10"
+        android:drawableLeft="@mipmap/icon_clear"
+        android:gravity="center_vertical"
+        android:padding="@dimen/dp_6"
+        android:text="@string/button_back"
+        android:textSize="@dimen/sp_14" />
+
+</RelativeLayout>

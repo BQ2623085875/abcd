@@ -48,68 +48,45 @@
     <application
         android:name=".global.MainApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/icon_logo"
+        android:icon="@mipmap/content_null_sel"
         android:label="@string/app_name"
         android:networkSecurityConfig="@xml/network_security_config"
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/icon_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".view.zxing.QRActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.StoreScanActivity"
+            android:exported="true">
 
+        </activity>
+        <activity
+            android:name=".activity.StoreDetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.StoreListActivity"
+            android:exported="true" />
         <activity
             android:name=".test.TestActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:screenOrientation="landscape" />
+            android:configChanges="keyboardHidden|orientation|screenSize" />
         <activity
             android:name=".activity.LoginActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:screenOrientation="landscape">
+            android:configChanges="keyboardHidden|orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- 主页 -->
+        </activity>
         <activity
             android:name=".activity.MainActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".view.edit.RemoveBoardEditorActivity"
-            android:theme="@style/DialogActivity"
-            android:windowSoftInputMode="stateAlwaysVisible" /> <!-- 输入框，拆板 -->
-        <activity
-            android:name=".view.edit.RemoveBoardCountEditorActivity"
-            android:theme="@style/DialogActivity"
-            android:windowSoftInputMode="stateAlwaysVisible" /> <!-- 输入框，件数 -->
-        <activity
-            android:name=".view.edit.GoodsEditorActivity"
-            android:theme="@style/DialogActivity"
-            android:windowSoftInputMode="stateAlwaysVisible" /> <!-- 输入框，件数 -->
-        <activity
-            android:name=".view.edit.InternationalGoodsEditorActivity"
-            android:theme="@style/DialogActivity"
-            android:windowSoftInputMode="stateAlwaysVisible" /> <!-- 输入框，件数，重量，体积 -->
-        <activity
-            android:name=".view.edit.GoodsVolumeEditorActivity"
-            android:theme="@style/DialogActivity"
-            android:windowSoftInputMode="stateAlwaysVisible" /> <!-- 自定义板 -->
-        <activity
-            android:name=".view.edit.CustomContainerEditorActivity"
-            android:theme="@style/DialogActivity"
-            android:windowSoftInputMode="stateAlwaysVisible" /> <!-- 输入框 -->
-        <activity
-            android:name=".view.edit.EditorActivity"
-            android:theme="@style/DialogActivity"
-            android:windowSoftInputMode="stateVisible|adjustResize" /> <!-- 输入框 -->
-        <activity
-            android:name=".view.edit.EditorOrderNoActivity"
-            android:theme="@style/DialogActivity"
-            android:windowSoftInputMode="stateVisible|adjustResize" /> <!-- 华为扫码 -->
+            android:configChanges="keyboardHidden|orientation|screenSize" />
         <activity
             android:name="com.huawei.hms.hmsscankit.ScanKitActivity"
             android:screenOrientation="landscape" /> <!-- NFC扫描 -->
-
         <service android:name=".service.DownAPKService" />
 
         <provider

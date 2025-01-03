@@ -255,4 +255,7 @@ public interface Constant {
 
 
     String IF_GUOJI = "ifGuoJi";
+
+    String PAGENUM = "pageNum";
+    String PAGESIZE = "pageSize";
 }

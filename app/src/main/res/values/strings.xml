@@ -1,10 +1,38 @@
 <resources>
 
     <string name="app_english_name">Integrated freight management platform</string>
-    <string name="login_user_hint">请输入用户名</string>
-    <string name="login_password_hint">请输入密码</string>
+    <string name="login_user_hint">请输入用户名/手机号</string>
+    <string name="login_password_hint">请输入6-16位密码</string>
     <string name="button_login">登录</string>
     <string name="button_remember_password">记住密码</string>
+
+    <string name="phone_number">手机号</string>
+
+    <string name="text_home">首页</string>
+    <string name="text_my">我的</string>
+
+    <string name="text_menu">菜单</string>
+
+    <string name="text_department">部门：</string>
+    <string name="text_post">岗位：</string>
+
+    <string name="text_problem_feedback">问题反馈</string>
+    <string name="text_set_up">设置</string>
+    <string name="text_clear_cache">清楚缓存</string>
+    <string name="text_up_login">退出账号</string>
+
+    <string name="text_warehouse_entry_processing">入库办理</string>
+    <string name="text_outbound_processing">出库办理</string>
+    <string name="text_inventory_management">盘点管理</string>
+    <string name="text_equipment_implementation">设备实施</string>
+
+    <string name="text_application_time">申请时间：</string>
+    <string name="text_storeroom">库房：</string>
+    <string name="text_save_draft">保存草稿</string>
+    <string name="text_save">保存</string>
+    <string name="text_model">型号：</string>
+    <string name="text_supplier">供应商：</string>
+
 
     <string name="text_change_password">修改密码</string>
     <string name="text_original_password">原密码</string>
@@ -18,7 +46,7 @@
     <string name="is_password">两次密码不一致</string>
 
 
-    <string name="toast_user_empty">请输入用户名</string>
+    <string name="toast_user_empty">请输入用户名/手机号</string>
     <string name="toast_password_empty">请输入密码</string>
     <string name="toast_password_error">密码错误，请重新输入</string>
     <string name="toast_please_select_order">请选择运单</string>
@@ -364,7 +392,8 @@
     <string name="text_odd_status">状态</string>
     <string name="text_stevedores_personnel">装卸人</string>
     <string name="text_handover_time">交接时间</string>
-    <string name="text_position_text">序</string>
+    <string name="text_position_text">序号</string>
+    <string name="text_positionlist_text">序列号</string>
     <string name="text_remarks">备注</string>
     <string name="text_consignor_person">发货人</string>
     <string name="text_storage_area">存放区域</string>
@@ -549,4 +578,6 @@
     <string name="text_nfc_read">标签读取</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="terminal_management_system">终端管理系统</string>
 </resources>

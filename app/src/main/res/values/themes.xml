@@ -2,14 +2,9 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <!--<item name="colorPrimary">@color/white</item>
-        <item name="colorPrimaryVariant">@color/white</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>-->
-
-
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowFullscreen">true</item>
+        <item name="colorPrimary">@color/color_blue_dark_80</item>
+        <item name="colorPrimaryDark">@color/color_blue_dark_80</item>
+        <item name="colorAccent">@color/color_blue_dark_80</item>
     </style>
 
 

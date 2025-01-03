@@ -4,8 +4,10 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.graphics.Color;
 import android.media.AudioManager;
 import android.media.SoundPool;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.View;
@@ -21,13 +23,12 @@ import com.example.terminal.R;
 import com.example.terminal.global.Constant;
 import com.example.terminal.global.ConstantInfo;
 import com.example.terminal.global.MainApplication;
-import com.example.terminal.http.NetworkUtils;
-import com.example.terminal.http.network.OkGoBackListener;
-import com.example.terminal.receiver.CommonReceiver;
+import com.example.terminal.listener.RecyclerView.RefreshAdapter;
+import com.example.terminal.listener.RecyclerView.RefreshListener;
 import com.example.terminal.util.CommonUtils;
+import com.example.terminal.util.ProgressUtils;
 import com.example.terminal.util.ToastUtils;
-import com.example.terminal.view.dialog.AlertDialog;
-import com.example.terminal.view.dialog.AlertMessageDialog;
+import com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout;
 import com.lzy.okgo.model.HttpParams;
 
 import java.util.Map;
@@ -108,6 +109,28 @@ public abstract class BaseActivity extends AppCompatActivity implements ViewTree
 
     protected void initConnect() {
     }
+
+    /**
+     * 设置刷新
+     *
+     * @param mRefreshLayout
+     */
+    protected void setRefreshListener(TwinklingRefreshLayout mRefreshLayout) {
+        mRefreshLayout.setOnRefreshListener(new RefreshAdapter(onRefreshListener));
+        ProgressUtils.showProgress(mActivity);
+    }
+
+    /**
+     * 刷新页面
+     */
+    protected RefreshListener onRefreshListener = new RefreshListener() {
+        @Override
+        protected void onRefresh() {
+            ProgressUtils.showProgress(mActivity);
+            initConnect();
+        }
+    };
+
 
     /**
      * @param code
@@ -334,38 +357,7 @@ public abstract class BaseActivity extends AppCompatActivity implements ViewTree
 
     @Override
     public void onBackPressed() {
-        if (IsEditor) {
-            AlertDialog.getInstance(mActivity)
-                    .setContent(R.string.toast_not_save_finish)
-                    .setConfirmButton(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            onFinish(Constant.RESULT_CODE);
-                        }
-                    })
-                    .show();
-        } else {
-            if (ConstantInfo.isReturn) {
-                if (ConstantInfo.IDS) {
-                    NetworkUtils.securePageLock2(new OkGoBackListener(mActivity) {
-                        @Override
-                        public void onSuccess(Object body) {
-                            ConstantInfo.isReturn = false;
-                            ConstantInfo.IDS = false;
-                        }
-                    }, ConstantInfo.ModuleID, ConstantInfo.StringID);
-                } else {
-                    NetworkUtils.securePageLock(new OkGoBackListener(mActivity) {
-                        @Override
-                        public void onSuccess(Object body) {
-                            ConstantInfo.isReturn = false;
-                            ConstantInfo.IDS = false;
-                        }
-                    }, ConstantInfo.ModuleID, ConstantInfo.ID);
-                }
-            }
-            onFinish();
-        }
+        onFinish();
     }
 
     //返回键双击事件

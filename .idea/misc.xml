@@ -5,18 +5,96 @@
       <map>
         <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/drawable/oval_green.xml" value="0.2375" />
         <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/drawable/shape_blue_20.xml" value="0.2375" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/drawable/shape_butto_frame_green_5.xml" value="0.2375" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/drawable/shape_butto_frame_grey_10.xml" value="0.2375" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/drawable/shape_butto_frame_grey_5.xml" value="0.169" />
         <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/drawable/shape_button_sel.xml" value="0.2375" />
         <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/drawable/shape_top_gray.xml" value="0.2375" />
         <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/drawable/shape_white.xml" value="0.2375" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/drawable/shape_white_trans_20.xml" value="0.2375" />
         <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/drawable/shape_yellow.xml" value="0.2375" />
         <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/drawable/spinner_background_sel.xml" value="0.2375" />
         <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/activity_application_receipt.xml" value="0.2151268115942029" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/activity_continuous_scan.xml" value="0.23125" />
         <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/activity_login.xml" value="0.23125" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/activity_my_capture.xml" value="0.23125" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/activity_qr.xml" value="0.21666666666666667" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/activity_qractivity.xml" value="0.23125" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/activity_store_details.xml" value="0.2" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/activity_store_list.xml" value="0.264" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/activity_store_scan.xml" value="0.536" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/activity_store_second_page.xml" value="0.23125" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/adapter_details_list_store.xml" value="0.4" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/adapter_list_store.xml" value="0.264" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/adapter_scan_store.xml" value="0.4" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/dialog_alert.xml" value="0.23125" />
         <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/editor_remove_board.xml" value="0.23125" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/fragment_home.xml" value="0.23125" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/fragment_my.xml" value="0.23125" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/return_layout.xml" value="0.23125" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/view_content_null.xml" value="0.34375" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/view_qr.xml" value="0.23125" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/view_recycler_list.xml" value="0.29891304347826086" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/editor_line.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/main_buttomtextcolor.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/selector_arrow_left.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/selector_arrow_right.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/selector_back.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/selector_blue_color.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/selector_blue_left.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/selector_blue_right.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/selector_bottom_blue_shape.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/selector_button.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/selector_clear.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/selector_close_red.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/selector_content_null.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/selector_cyan.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/selector_display_login.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/selector_hide_button.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/selector_white_fd_color.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/shape_blue_10.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/shape_blue_5.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/shape_blue_trans_left_sel.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/shape_blue_trans_right.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/shape_blue_trans_top_left.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/shape_butto_frame_grey_10.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/shape_button_sel.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/shape_cyan.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/shape_gray.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/shape_green.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/shape_orange.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/shape_orange_5.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/shape_red_10.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/shape_red_dark.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/shape_shadow.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/shape_top_gray.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/shape_top_white.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/shape_trans.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/shape_white.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/shape_white_trans_20.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/shape_white_trans_top.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/spinner_background.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/spinner_background_sel.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/switch_blue_thumb.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/drawable/switch_blue_track.xml" value="0.342" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/layout/activity_login.xml" value="0.3619791666666667" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/layout/activity_main.xml" value="0.3619791666666667" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/layout/activity_store_list.xml" value="0.3619791666666667" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/layout/dialog_update.xml" value="0.12291666666666666" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/layout/fragment_home.xml" value="0.3619791666666667" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/layout/fragment_my.xml" value="0.34739583333333335" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/layout/return_layout.xml" value="0.34739583333333335" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/layout/view_change_another_date.xml" value="0.3619791666666667" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/layout/view_change_date.xml" value="0.3619791666666667" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/layout/view_header_title.xml" value="0.3619791666666667" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/layout/view_pop_spinner.xml" value="0.3619791666666667" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/layout/view_pop_spinner_item.xml" value="0.3619791666666667" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/layout/view_search_flight_number_edit.xml" value="0.3619791666666667" />
+        <entry key="..\:/bq-folder/AndroidExploitation/Project/terminal_app/app/src/main/res/layout/view_search_waybill_number_edit.xml" value="0.3619791666666667" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

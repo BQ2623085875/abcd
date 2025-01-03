@@ -5,9 +5,9 @@ ext {
             dev: [
                     versionCode : 1,// 构建版本号
                     versionName : "1.0.0",// 版本名称
-                    baseUrl     : "172.30.3.49",// 请求的域名
+                    baseUrl     : "39.104.86.174",// 请求的域名
                     WebSocketUrl: "172.30.3.49",
-                    Prot        : "9220",
+                    Prot        : "9330",
                     Station     : "TERMINAL",
                     AppName     : "终端管理_DEV"
             ]
