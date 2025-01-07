@@ -22,17 +22,17 @@
     <LinearLayout
         android:id="@+id/mLl_StoreScan"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/dp_250"
         android:layout_below="@id/mTv_TitleBar"
         android:background="@color/black"
         android:orientation="vertical">
 
-        <com.journeyapps.barcodescanner.DecoratedBarcodeView
-            android:id="@+id/dbv"
+        <com.journeyapps.barcodescanner.CompoundBarcodeView
+            android:id="@+id/barcodeView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:zxing_framing_rect_height="200dp"
-            app:zxing_framing_rect_width="200dp"
+            app:zxing_framing_rect_width="@dimen/dp_300"
             app:zxing_preview_scaling_strategy="fitXY"
             app:zxing_scanner_layout="@layout/view_qr"
             app:zxing_use_texture_view="true" />
@@ -47,7 +47,7 @@
         android:layout_marginTop="@dimen/dp_10"
         android:layout_marginRight="@dimen/dp_10"
         android:layout_marginBottom="@dimen/dp_10"
-        android:background="@color/white"
+        android:background="@drawable/shape_white"
         android:orientation="vertical">
 
         <LinearLayout
@@ -68,7 +68,7 @@
                     android:layout_marginTop="@dimen/dp_5"
                     android:layout_marginRight="@dimen/dp_5"
                     android:layout_marginBottom="@dimen/dp_5"
-                    android:src="@color/Blue" />
+                    android:src="@mipmap/store_list_log" />
 
                 <TextView
                     android:id="@+id/mTv_deviceName"
@@ -186,14 +186,26 @@
             </RelativeLayout>
         </LinearLayout>
 
-        <ImageView
+        <!--<ImageView
             android:id="@+id/mIv_progress"
             android:layout_width="@dimen/dp_50"
             android:layout_height="@dimen/dp_50"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="@dimen/dp_10"
-            android:src="@mipmap/icon_logo" />
+            android:src="@mipmap/icon_logo" />-->
+
+
+        <com.example.terminal.view.CustomCircleProgress
+            android:id="@+id/mIv_progress"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_15" />
+
 
     </RelativeLayout>
 
@@ -294,5 +306,6 @@
             tools:ignore="OnClick" />
 
     </RelativeLayout>
+
 
 </RelativeLayout>

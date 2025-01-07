@@ -4,6 +4,8 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.terminal.R;
+import com.example.terminal.activity.OutboundListActivity;
+import com.example.terminal.activity.StocktakingListActivity;
 import com.example.terminal.activity.StoreListActivity;
 import com.example.terminal.base.BaseFragment;
 
@@ -42,13 +44,13 @@ public class HomeFragment extends BaseFragment {
     public void onClickSort(View view) {
         switch (view.getId()) {
             case R.id.mTv_Store:
-                turnToAct(StoreListActivity.class,false);
+                turnToAct(StoreListActivity.class, false);
                 break;
             case R.id.mTv_Outbound:
-                mTv_Outbound.setText("2");
+                turnToAct(OutboundListActivity.class, false);
                 break;
             case R.id.mTv_Stocktaking:
-                mTv_Stocktaking.setText("3");
+                turnToAct(StocktakingListActivity.class, false);
                 break;
             case R.id.mTv_Device:
                 mTv_Device.setText("4");

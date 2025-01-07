@@ -48,16 +48,16 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         mIbClearUser = findViewById(R.id.mIbClearUser);
         mIbDisplayPassword = findViewById(R.id.mIbDisplayPassword);
 
-        findViewById(R.id.Login_Background_LinearLayout).setLayoutParams(new RelativeLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, DensityUtils.getScreenHeight((Activity) mActivity) / 2));
+        findViewById(R.id.Login_Background_LinearLayout).setLayoutParams(new RelativeLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, DensityUtils.getScreenHeight((Activity) mActivity) / 3));
 
         mEtUserName.setText("admin");
         mEtPassword.setText("admin123");
 
-        String token = SharedPreUtils.getString("TOKEN");
-        if (!token.equals("")) {
-            ConstantInfo.TOKEN = token;
-            turnToAct(MainActivity.class);
-        }
+//        String token = SharedPreUtils.getString("TOKEN");
+//        if (token != null && !token.equals("")) {
+//            ConstantInfo.TOKEN = token;
+//            turnToAct(MainActivity.class);
+//        }
     }
 
     @Override

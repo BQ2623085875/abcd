@@ -32,11 +32,20 @@ public class StoreListAdapter extends BaseRecyclerAdapter<StoreListBean.RowsBean
         TextView mTv_applicationTime = holder.findViewById(R.id.mTv_applicationTime);//申请时间
         TextView mTv_state = holder.findViewById(R.id.mTv_state);//状态
 
+        if (data.getStatus().equals("1")) {//审核中
+            mTv_state.setText(R.string.text_be_verified);
+        } else if (data.getStatus().equals("3")) {
+            mTv_state.setText("入库中");
+        } else if (data.getStatus().equals("4")) {
+            mTv_state.setText("完成");
+        } else {
+            mTv_state.setText("草稿");
+        }
+
         mTv_libraryName.setText(mList.get(position).getStoreHouseName());
         mTv_typeColumn.setText(mList.get(position).getTypeName());
         mTv_applicationTime.setText(mList.get(position).getApplyDate());
-        mTv_state.setText(mList.get(position).getArrs().get(0));
 
-        setItemClickListener(mLl , position);
+        setItemClickListener(mLl, position);
     }
 }

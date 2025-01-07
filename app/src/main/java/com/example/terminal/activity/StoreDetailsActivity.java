@@ -32,12 +32,20 @@ public class StoreDetailsActivity extends BaseActivity {
     private TwinklingRefreshLayout mRefreshLayout;
     private RecyclerView mRvContainer;
     private RelativeLayout mRlContentNull;
-    private TextView mTv_return, mTv_Save, mTv_Submit, mTv_pleaseSelect, mTv_Titlelibrary;
     private LinearLayout mLl_pleaseSelect;
-    private int mId;
+    private TextView mTv_return,
+            mTv_Save,
+            mTv_Submit,
+            mTv_pleaseSelect,
+            mTv_Titlelibrary;
+
+
     private StoreListDetailsBean storeListDetailsBean;
     private List<StoreListDetailsBean.DataBean.TstoregeInDeviceBean> tstoregeInDevice;
+
     private StoreListDetailsAdapter storeListDetailsAdapter;
+
+    private int mId;
     private String mStoreHouseName;
 
     @Override
@@ -107,6 +115,22 @@ public class StoreDetailsActivity extends BaseActivity {
         }
     }
 
+    /**
+     * 条目点击事件
+     */
+    private class DetailsItemClickListener extends OnItemClickListener {
+        @Override
+        public void onClick(View view, int position) {
+            mIntent = new Intent(mActivity, StoreScanActivity.class);
+            mBundle = new Bundle();
+            mBundle.putInt(Constant.TurnType, position);
+            mBundle.putInt(Constant.ID, storeListDetailsBean.getData().getId());
+            mBundle.putSerializable(Constant.INFO, tstoregeInDevice.get(position));
+            mIntent.putExtras(mBundle);
+            turnActForResult(mIntent);
+        }
+    }
+
     public void onClickSort(View view) {
         switch (view.getId()) {
             case R.id.mTv_Return:
@@ -124,19 +148,5 @@ public class StoreDetailsActivity extends BaseActivity {
         }
     }
 
-    /**
-     * 条目点击事件
-     */
-    private class DetailsItemClickListener extends OnItemClickListener {
-        @Override
-        public void onClick(View view, int position) {
-            mIntent = new Intent(mActivity, StoreScanActivity.class);
-            mBundle = new Bundle();
-            mBundle.putInt(Constant.TurnType, position);
-            mBundle.putInt(Constant.ID, storeListDetailsBean.getData().getId());
-            mBundle.putSerializable(Constant.INFO, tstoregeInDevice.get(position));
-            mIntent.putExtras(mBundle);
-            turnActForResult(mIntent);
-        }
-    }
+
 }

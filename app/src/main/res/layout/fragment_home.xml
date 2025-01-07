@@ -22,89 +22,115 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/dp_120"
         android:layout_marginLeft="@dimen/dp_20"
         android:layout_marginTop="@dimen/dp_20"
         android:layout_marginRight="@dimen/dp_20"
         android:layout_marginBottom="@dimen/dp_10"
         android:orientation="horizontal">
 
-        <!--入库办理-->
-        <TextView
-            android:id="@+id/mTv_Store"
+        <RelativeLayout
             android:layout_width="@dimen/dp_0"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginRight="@dimen/dp_10"
             android:layout_weight="1"
-            android:background="@color/white"
-            android:drawableTop="@mipmap/user_header"
-            android:gravity="center"
-            android:onClick="onClick"
-            android:paddingTop="@dimen/dp_10"
-            android:paddingBottom="@dimen/dp_10"
-            android:text="@string/text_warehouse_entry_processing"
-            android:textColor="@color/text_color"
-            android:textSize="@dimen/sp_15" />
-        <!--出库办理-->
-        <TextView
-            android:id="@+id/mTv_Outbound"
+            android:background="@drawable/shape_white">
+            <!--入库办理-->
+            <TextView
+                android:id="@+id/mTv_Store"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@color/white"
+                android:drawableTop="@mipmap/store"
+                android:drawablePadding="@dimen/dp_5"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/text_warehouse_entry_processing"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/sp_15" />
+        </RelativeLayout>
+
+        <RelativeLayout
             android:layout_width="@dimen/dp_0"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginLeft="@dimen/dp_10"
             android:layout_marginRight="@dimen/dp_10"
             android:layout_weight="1"
-            android:background="@color/white"
-            android:drawableTop="@mipmap/user_header"
-            android:gravity="center"
-            android:onClick="onClick"
-            android:paddingTop="@dimen/dp_10"
-            android:paddingBottom="@dimen/dp_10"
-            android:text="@string/text_outbound_processing"
-            android:textColor="@color/text_color"
-            android:textSize="@dimen/sp_15" />
-        <!--盘点管理-->
-        <TextView
-            android:id="@+id/mTv_Stocktaking"
+            android:background="@drawable/shape_white">
+            <!--出库办理-->
+            <TextView
+                android:id="@+id/mTv_Outbound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@color/white"
+                android:drawableTop="@mipmap/outbound"
+                android:drawablePadding="@dimen/dp_5"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/text_outbound_processing"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/sp_15" />
+        </RelativeLayout>
+
+        <RelativeLayout
             android:layout_width="@dimen/dp_0"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginLeft="@dimen/dp_10"
             android:layout_weight="1"
-            android:background="@color/white"
-            android:drawableTop="@mipmap/user_header"
-            android:gravity="center"
-            android:onClick="onClick"
-            android:paddingTop="@dimen/dp_10"
-            android:paddingBottom="@dimen/dp_10"
-            android:text="@string/text_inventory_management"
-            android:textColor="@color/text_color"
-            android:textSize="@dimen/sp_15" />
+            android:background="@drawable/shape_white">
+            <!--盘点管理-->
+            <TextView
+                android:id="@+id/mTv_Stocktaking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:background="@color/white"
+                android:drawableTop="@mipmap/stocktaking"
+                android:drawablePadding="@dimen/dp_5"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/text_inventory_management"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/sp_15" />
+        </RelativeLayout>
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/dp_120"
         android:layout_marginLeft="@dimen/dp_20"
         android:layout_marginTop="@dimen/dp_10"
         android:layout_marginRight="@dimen/dp_20"
         android:orientation="horizontal">
 
-        <!--设备实施-->
-        <TextView
-            android:id="@+id/mTv_Device"
+        <RelativeLayout
             android:layout_width="@dimen/dp_0"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/dp_10"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/white"
-            android:drawableTop="@mipmap/user_header"
-            android:gravity="center"
-            android:onClick="onClick"
-            android:paddingTop="@dimen/dp_10"
-            android:paddingBottom="@dimen/dp_10"
-            android:text="@string/text_equipment_implementation"
-            android:textColor="@color/text_color"
-            android:textSize="@dimen/sp_15" />
+            android:background="@drawable/shape_white">
+
+            <!--设备实施-->
+            <TextView
+                android:id="@+id/mTv_Device"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:drawableTop="@mipmap/device"
+                android:drawablePadding="@dimen/dp_5"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/text_equipment_implementation"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/sp_15" />
+        </RelativeLayout>
         <!--空的组件-->
         <TextView
             android:layout_width="@dimen/dp_0"

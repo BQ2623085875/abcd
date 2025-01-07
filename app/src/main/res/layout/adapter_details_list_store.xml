@@ -2,11 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/mLl"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/dp_80"
+    android:layout_height="@dimen/dp_90"
     android:layout_marginLeft="@dimen/dp_10"
     android:layout_marginTop="@dimen/dp_10"
     android:layout_marginRight="@dimen/dp_10"
-    android:background="@color/white"
+    android:background="@drawable/shape_white"
     android:orientation="vertical">
 
     <RelativeLayout
@@ -18,10 +18,10 @@
             android:layout_width="@dimen/dp_20"
             android:layout_height="@dimen/dp_20"
             android:layout_marginLeft="@dimen/dp_10"
-            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_8"
             android:layout_marginRight="@dimen/dp_5"
-            android:layout_marginBottom="@dimen/dp_5"
-            android:src="@color/Blue" />
+            android:layout_marginBottom="@dimen/dp_8"
+            android:src="@mipmap/store_list_log" />
 
         <TextView
             android:id="@+id/mTv_deviceName"

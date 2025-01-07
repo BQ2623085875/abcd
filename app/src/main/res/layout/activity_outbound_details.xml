@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_fd"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.OutboundDetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/mRl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:background="@color/color_blue_dark_80">
+
+        <TextView
+            android:id="@+id/mTv_Titlelibrary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:text="@string/text_storeroom"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/sp_15"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/mLl_pleaseSelect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/shape_butto_frame_grey_5"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_5">
+
+                <TextView
+                    android:id="@+id/mTv_pleaseSelect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_please_select"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/sp_12"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="@dimen/dp_10"
+                    android:layout_height="@dimen/dp_10"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:layout_marginRight="@dimen/dp_2"
+                    android:src="@mipmap/icon_arrow_black_down" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <include
+        layout="@layout/view_recycler_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/mIl_BottomMenu"
+        android:layout_below="@id/mRl" />
+
+
+    <RelativeLayout
+        android:id="@+id/mIl_BottomMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:paddingTop="@dimen/dp_5"
+        android:paddingBottom="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/mTv_Return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_15"
+            android:background="@drawable/shape_butto_frame_grey_10"
+            android:drawableLeft="@mipmap/icon_clear"
+            android:onClick="onClick"
+            android:padding="@dimen/dp_6"
+            android:text="@string/button_back"
+            android:textSize="@dimen/sp_14"
+            tools:ignore="OnClick" />
+
+        <TextView
+            android:id="@+id/mTv_Save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/dp_15"
+            android:background="@drawable/shape_butto_frame_grey_10"
+            android:drawableLeft="@mipmap/icon_clear"
+            android:onClick="onClick"
+            android:padding="@dimen/dp_6"
+            android:text="@string/text_save_draft"
+            android:textSize="@dimen/sp_14"
+            tools:ignore="OnClick" />
+
+        <TextView
+            android:id="@+id/mTv_Submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:background="@drawable/shape_butto_frame_grey_10"
+            android:drawableLeft="@mipmap/icon_clear"
+            android:onClick="onClick"
+            android:padding="@dimen/dp_6"
+            android:text="@string/button_submit"
+            android:textSize="@dimen/sp_14"
+            tools:ignore="OnClick" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,12 +1,19 @@
 package com.example.terminal.activity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.os.PersistableBundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -25,9 +32,16 @@ import com.example.terminal.http.network.OkGoBackListener;
 import com.example.terminal.listener.OnTextClickListener;
 import com.example.terminal.util.DensityUtils;
 import com.example.terminal.util.ToastUtils;
+import com.example.terminal.view.CustomCircleProgress;
 import com.example.terminal.view.zxing.QRActivity;
+import com.google.zxing.ResultPoint;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
+import com.journeyapps.barcodescanner.BarcodeCallback;
+import com.journeyapps.barcodescanner.BarcodeResult;
+import com.journeyapps.barcodescanner.CaptureManager;
+import com.journeyapps.barcodescanner.CompoundBarcodeView;
+import com.journeyapps.barcodescanner.DecoratedBarcodeView;
 import com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout;
 
 import java.io.Serializable;
@@ -41,15 +55,26 @@ public class StoreScanActivity extends BaseActivity {
     private TwinklingRefreshLayout mRefreshLayout;
     private RecyclerView mRvContainer;
     private RelativeLayout mRlContentNull;
-    private TextView mTv_titleBar, mTv_deviceName, mTv_typeColumn, mTv_Model, mTv_Supplier;
+    private CompoundBarcodeView barcodeView;
+    private CustomCircleProgress mIv_progress;
+    private TextView mTv_titleBar,
+            mTv_deviceName,
+            mTv_typeColumn,
+            mTv_Model,
+            mTv_Supplier,
+            mTv_Return;
 
 
     private TstoregeInDeviceBean tstoregeInDeviceBean;
     private StoreListDetailsBean storeListDetailsBean;
+
+    private List<TstoregeInDeviceBean.tstoregeInDeviceDetailListBean> tstoregeInDeviceDetailList;
+
     private int mPosition;
     private int mId;
-    private List<TstoregeInDeviceBean.tstoregeInDeviceDetailListBean> tstoregeInDeviceDetailList;
+
     private StoreScanAdapter storeScanAdapter;
+
 
     @Override
     protected int setContentView() {
@@ -68,28 +93,25 @@ public class StoreScanActivity extends BaseActivity {
         mRvContainer = findViewById(R.id.mRvContainer);
         mRlContentNull = findViewById(R.id.mRlContentNull);
 
-        findViewById(R.id.mLl_StoreScan).setLayoutParams(new RelativeLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, DensityUtils.getScreenHeight((Activity) mActivity) / 3));
+        mTv_Return = findViewById(R.id.mTv_Return);
 
+        barcodeView = findViewById(R.id.barcodeView);
 
-        IntentIntegrator intentIntegrator = new IntentIntegrator(StoreScanActivity.this);
-        intentIntegrator.setOrientationLocked(false);
-        intentIntegrator.setCaptureActivity(QRActivity.class); // 设置自定义的activity是QRActivity
-        intentIntegrator.setRequestCode(Constant.REQUEST_CODE);
-        intentIntegrator.initiateScan();
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == Constant.REQUEST_CODE) {
-            IntentResult scanResult = IntentIntegrator.parseActivityResult(resultCode, data);
-            final String qrContent = scanResult.getContents();
-            Toast.makeText(StoreScanActivity.this, "扫描结果:" + qrContent, Toast.LENGTH_SHORT).show();
-        }
+        mIv_progress = findViewById(R.id.mIv_progress);
     }
 
     @Override
     protected void initData() {
+        //启动扫描
+        // 检查相机权限
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, Constant.REQUEST_CODE);
+        } else {
+            // 如果有权限，直接启动扫描
+            StartScan();
+        }
+
+
         mPosition = mBundle.getInt(Constant.TurnType);
         mId = mBundle.getInt(Constant.ID);
         tstoregeInDeviceBean = (TstoregeInDeviceBean) mBundle.getSerializable(Constant.INFO);
@@ -99,7 +121,16 @@ public class StoreScanActivity extends BaseActivity {
             mTv_deviceName.setText(tstoregeInDeviceBean.getDeviceName());
             mTv_Model.setText(tstoregeInDeviceBean.getDeviceType());
             mTv_Supplier.setText(tstoregeInDeviceBean.getDeviceCompany());
+
+            mIv_progress.increaseProgress(tstoregeInDeviceBean.getDeviceNum());
         }
+
+
+        mTv_Return.setOnClickListener(this::onClickSort);
+    }
+
+    private void StartScan() {
+        barcodeView.decodeContinuous(callback);
     }
 
     @Override
@@ -147,4 +178,53 @@ public class StoreScanActivity extends BaseActivity {
         }
     };
 
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == Constant.REQUEST_CODE) {
+            for (int i = 0; i < permissions.length; i++) {
+                if (grantResults[i] == PackageManager.PERMISSION_GRANTED) {
+                    // 权限被授予，执行相应操作
+                    StartScan();
+                } else {
+                    // 权限被拒绝，执行相应操作
+                    ToastUtils.showToast("用户拒绝访问相机权限");
+                }
+            }
+        }
+    }
+
+    public void onClickSort(View view) {
+        switch (view.getId()) {
+            case R.id.mTv_Return:
+                onFinish();
+                break;
+        }
+    }
+
+
+    private BarcodeCallback callback = new BarcodeCallback() {
+
+        @Override
+        public void barcodeResult(BarcodeResult result) {
+            ToastUtils.showToast(result.getText().toString());
+        }
+
+        @Override
+        public void possibleResultPoints(List<ResultPoint> resultPoints) {
+
+        }
+    };
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        barcodeView.resume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        barcodeView.pause();
+    }
 }

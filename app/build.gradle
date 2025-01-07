@@ -1,5 +1,7 @@
 plugins {
     id 'com.android.application'
+
+    id 'com.huawei.agconnect'
 }
 
 apply from: "../location.gradle"
@@ -135,5 +137,6 @@ dependencies {
 
 
     implementation 'com.journeyapps:zxing-android-embedded:3.6.0'
+    implementation 'com.google.zxing:core:3.3.3'
 
 }

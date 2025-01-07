@@ -3,12 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/drawable/main_buttomtextcolor.xml" value="0.1885" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/drawable/main_home_buttom_log.xml" value="0.1535" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/drawable/main_my_buttom_log.xml" value="0.1535" />
         <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/drawable/oval_green.xml" value="0.2375" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/drawable/selector_button.xml" value="0.2205" />
         <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/drawable/shape_blue_20.xml" value="0.2375" />
         <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/drawable/shape_butto_frame_green_5.xml" value="0.2375" />
         <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/drawable/shape_butto_frame_grey_10.xml" value="0.2375" />
         <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/drawable/shape_butto_frame_grey_5.xml" value="0.169" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/drawable/shape_button.xml" value="0.2205" />
         <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/drawable/shape_button_sel.xml" value="0.2375" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/drawable/shape_login_butto.xml" value="0.2205" />
         <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/drawable/shape_top_gray.xml" value="0.2375" />
         <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/drawable/shape_white.xml" value="0.2375" />
         <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/drawable/shape_white_trans_20.xml" value="0.2375" />
@@ -17,15 +23,29 @@
         <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/activity_application_receipt.xml" value="0.2151268115942029" />
         <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/activity_continuous_scan.xml" value="0.23125" />
         <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/activity_login.xml" value="0.23125" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/activity_my_capture.xml" value="0.23125" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/activity_outbound_details.xml" value="0.23125" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/activity_outbound_list.xml" value="0.23125" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/activity_outbound_scan.xml" value="0.23125" />
         <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/activity_qr.xml" value="0.21666666666666667" />
         <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/activity_qractivity.xml" value="0.23125" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/activity_scan.xml" value="0.2259963768115942" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/activity_stocktaking_details.xml" value="0.23125" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/activity_stocktaking_list.xml" value="0.23125" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/activity_stocktaking_scan.xml" value="0.23125" />
         <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/activity_store_details.xml" value="0.2" />
         <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/activity_store_list.xml" value="0.264" />
-        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/activity_store_scan.xml" value="0.536" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/activity_store_scan.xml" value="0.43700787401574803" />
         <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/activity_store_second_page.xml" value="0.23125" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/adapter_details_list_outbound.xml" value="0.23125" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/adapter_details_list_stocktaking.xml" value="0.23125" />
         <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/adapter_details_list_store.xml" value="0.4" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/adapter_list_outbound.xml" value="0.4" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/adapter_list_stocktaking.xml" value="0.23125" />
         <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/adapter_list_store.xml" value="0.264" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/adapter_scan_outbound.xml" value="0.23125" />
+        <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/adapter_scan_stocktaking.xml" value="0.4" />
         <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/adapter_scan_store.xml" value="0.4" />
         <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/dialog_alert.xml" value="0.23125" />
         <entry key="..\:/C/zhongji_company/code/terminal_app/app/src/main/res/layout/editor_remove_board.xml" value="0.23125" />

@@ -35,9 +35,9 @@ public class StoreListActivity extends BaseActivity {
     private TwinklingRefreshLayout mRefreshLayout;
     private RecyclerView mRvContainer;
     private RelativeLayout mRlContentNull;
-    private StoreListBean storeListBean;
     private TextView mTv_Return;
 
+    private StoreListBean storeListBean;
     private List<StoreListBean.RowsBean> rowsBeanList;
 
     private int pageNum = 1;

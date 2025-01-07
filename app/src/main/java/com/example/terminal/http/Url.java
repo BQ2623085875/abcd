@@ -32,4 +32,23 @@ public interface Url {
      */
     String getStoreDetails = BASE_URL + "/terminal/terminalIn/";
 
+    /**
+     * 出库办理列表
+     */
+    String getOutboundList = BASE_URL + "/terminal/terminalOut/list";
+
+    /**
+     * 出库办理列表详情
+     */
+    String getOutboundDetails = BASE_URL + "/terminal/terminalOut/";
+
+    /**
+     * 盘点管理列表
+     */
+    String getStocktakingList = BASE_URL + "/terminal/check/list";
+
+    /**
+     * 盘点管理列表详情
+     */
+    String getStocktakingDetails = BASE_URL + "/terminal/check/";
 }

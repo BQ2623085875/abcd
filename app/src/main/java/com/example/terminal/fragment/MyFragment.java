@@ -20,7 +20,10 @@ import com.example.terminal.http.GlideLoader;
 import com.example.terminal.http.NetworkUtils;
 import com.example.terminal.http.Url;
 import com.example.terminal.http.network.OkGoBackListener;
+import com.example.terminal.util.ToastUtils;
 import com.example.terminal.view.dialog.AlertDialog;
+
+import java.io.File;
 
 /**
  *
@@ -31,7 +34,7 @@ public class MyFragment extends BaseFragment {
     private TextView mTv_Department,//部门
             mTv_Post,//岗位
             mTv_userName;//用户名称
-    private RelativeLayout mRl_UpLogin;
+    private RelativeLayout mRl_UpLogin, mRl_ClearCache;
 
     private UserProfileBean userProfileBean;
 
@@ -47,11 +50,13 @@ public class MyFragment extends BaseFragment {
         mTv_Post = mView.findViewById(R.id.mTv_Post);
         mTv_userName = mView.findViewById(R.id.mTv_userName);
         mRl_UpLogin = mView.findViewById(R.id.mRl_UpLogin);
+        mRl_ClearCache = mView.findViewById(R.id.mRl_ClearCache);
     }
 
     @Override
     public void initData() {
         mRl_UpLogin.setOnClickListener(this::onClickSort);
+        mRl_ClearCache.setOnClickListener(this::onClickSort);
     }
 
     @Override
@@ -83,7 +88,9 @@ public class MyFragment extends BaseFragment {
             case R.id.mRl_UpLogin:
                 outLogin();
                 break;
-
+            case R.id.mRl_ClearCache:
+                clearCache();
+                break;
         }
     }
 
@@ -107,5 +114,49 @@ public class MyFragment extends BaseFragment {
 //                currentType = "";
 //            }
 //        }).show();
+    }
+
+    /**
+     * 清除应用缓存
+     */
+    private void clearCache() {
+        // 获取缓存目录
+        File cacheDir = getActivity().getCacheDir();
+
+        // 如果缓存目录存在且是一个目录
+        if (cacheDir != null && cacheDir.isDirectory()) {
+            // 递归删除缓存目录中的所有文件和子目录
+            deleteDir(cacheDir);
+        }
+
+        // 可选：清除外部缓存（如果有的话）
+        File externalCacheDir = getActivity().getExternalCacheDir();
+        if (externalCacheDir != null && externalCacheDir.isDirectory()) {
+            deleteDir(externalCacheDir);
+        }
+
+        // 通知用户缓存已清除（例如，通过Toast）
+        ToastUtils.showToast("缓存已清除");
+    }
+
+    /**
+     * 递归删除目录中的所有文件和子目录
+     *
+     * @param dir 要删除的目录
+     * @return 是否成功删除
+     */
+    private boolean deleteDir(File dir) {
+        if (dir != null && dir.isDirectory()) {
+            String[] children = dir.list();
+            for (String aChildren : children) {
+                boolean success = deleteDir(new File(dir, aChildren));
+                if (!success) {
+                    return false;
+                }
+            }
+            return dir.delete();
+        }
+        // 如果是文件则直接删除
+        return dir != null && dir.isFile() && dir.delete();
     }
 }

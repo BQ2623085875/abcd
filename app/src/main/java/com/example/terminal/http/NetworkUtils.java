@@ -2,6 +2,10 @@ package com.example.terminal.http;
 
 import com.example.terminal.BuildConfig;
 import com.example.terminal.bean.LoginBean;
+import com.example.terminal.bean.OutboudListDetailsBean;
+import com.example.terminal.bean.OutboundListBean;
+import com.example.terminal.bean.StocktakingDetailsBean;
+import com.example.terminal.bean.StocktakingListBean;
 import com.example.terminal.bean.StoreListBean;
 import com.example.terminal.bean.StoreListDetailsBean;
 import com.example.terminal.bean.UserProfileBean;
@@ -98,6 +102,9 @@ public class NetworkUtils {
                 });
     }
 
+    /**
+     * 入库办理详情
+     */
     public static void getStoreDetails(final OkGoBackListener listener, int id) {
         ProgressUtils.showProgress(listener.getActivity());
 
@@ -108,6 +115,78 @@ public class NetworkUtils {
                     @Override
                     public void onSuccess(String body) {
                         listener.onSuccess(JsonUtils.parseJsonToBean(body, StoreListDetailsBean.class));
+                    }
+                });
+    }
+
+    /**
+     * 出库办理列表
+     */
+    public static void getOutboundList(final OkGoBackListener listener, HttpParams valueParams) {
+
+        ProgressUtils.showProgress(listener.getActivity());
+
+        OkGo.<String>get(Url.getOutboundList)
+                .headers(Constant.Authorization, ConstantInfo.TOKEN)
+                .params(valueParams)
+                .tag(listener.getActivity())
+                .execute(new OkGoCallBackListener(listener) {
+                    @Override
+                    public void onSuccess(String body) {
+                        listener.onSuccess(JsonUtils.parseJsonToBean(body, OutboundListBean.class));
+                    }
+                });
+    }
+
+    /**
+     * 出库办理详情
+     */
+    public static void getOutboundDetails(final OkGoBackListener listener, int id) {
+        ProgressUtils.showProgress(listener.getActivity());
+
+        OkGo.<String>get(Url.getOutboundDetails + id)
+                .headers(Constant.Authorization, ConstantInfo.TOKEN)
+                .tag(listener.getActivity())
+                .execute(new OkGoCallBackListener(listener) {
+                    @Override
+                    public void onSuccess(String body) {
+                        listener.onSuccess(JsonUtils.parseJsonToBean(body, OutboudListDetailsBean.class));
+                    }
+                });
+    }
+
+    /**
+     * 盘点管理列表
+     */
+    public static void getStocktakingList(final OkGoBackListener listener, HttpParams valueParams) {
+
+        ProgressUtils.showProgress(listener.getActivity());
+
+        OkGo.<String>get(Url.getStocktakingList)
+                .headers(Constant.Authorization, ConstantInfo.TOKEN)
+                .params(valueParams)
+                .tag(listener.getActivity())
+                .execute(new OkGoCallBackListener(listener) {
+                    @Override
+                    public void onSuccess(String body) {
+                        listener.onSuccess(JsonUtils.parseJsonToBean(body, StocktakingListBean.class));
+                    }
+                });
+    }
+
+    /**
+     * 盘带管理详情
+     */
+    public static void getStocktakingDetails(final OkGoBackListener listener, int id) {
+        ProgressUtils.showProgress(listener.getActivity());
+
+        OkGo.<String>get(Url.getStocktakingDetails + id)
+                .headers(Constant.Authorization, ConstantInfo.TOKEN)
+                .tag(listener.getActivity())
+                .execute(new OkGoCallBackListener(listener) {
+                    @Override
+                    public void onSuccess(String body) {
+                        listener.onSuccess(JsonUtils.parseJsonToBean(body, StocktakingDetailsBean.class));
                     }
                 });
     }

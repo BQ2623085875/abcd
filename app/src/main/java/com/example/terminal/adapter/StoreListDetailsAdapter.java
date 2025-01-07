@@ -29,11 +29,13 @@ public class StoreListDetailsAdapter extends BaseRecyclerAdapter<StoreListDetail
         TextView mTv_typeColumn = holder.findViewById(R.id.mTv_typeColumn);
         TextView mTv_Model = holder.findViewById(R.id.mTv_Model);
         TextView mTv_Supplier = holder.findViewById(R.id.mTv_Supplier);
+        TextView mTv_state = holder.findViewById(R.id.mTv_state);
 
+        mTv_state.setText("100/" + data.getDeviceNum());
         mTv_deviceName.setText(data.getDeviceName());
         mTv_Model.setText(data.getDeviceType());
         mTv_Supplier.setText(data.getDeviceCompany());
 
-        setItemClickListener(mLl , position);
+        setItemClickListener(mLl, position);
     }
 }

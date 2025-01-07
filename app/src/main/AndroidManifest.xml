@@ -56,6 +56,24 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".activity.StocktakingScanActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.StocktakingDetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.StocktakingListActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.OutboundScanActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.OutboundDetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.OutboundListActivity"
+            android:exported="true" />
+        <activity
             android:name=".view.zxing.QRActivity"
             android:exported="true" />
         <activity

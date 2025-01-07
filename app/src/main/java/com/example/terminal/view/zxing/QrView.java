@@ -48,7 +48,7 @@ public class QrView extends ViewfinderView {
         int height = canvas.getHeight();
         //绘制4个角
 
-        paint.setColor(getResources().getColor(R.color.color_green));//定义画笔的颜色
+        paint.setColor(getResources().getColor(R.color.white));//定义画笔的颜色
         canvas.drawRect(frame.left, frame.top, frame.left + ScreenRate, frame.top + CORNER_WIDTH, paint);
         canvas.drawRect(frame.left, frame.top, frame.left + CORNER_WIDTH, frame.top + ScreenRate, paint);
 

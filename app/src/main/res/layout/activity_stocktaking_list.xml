@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_fd"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.StocktakingListActivity">
+
+    <TextView
+        android:id="@+id/mTv_TitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:background="@color/color_blue_dark_80"
+        android:gravity="center"
+        android:text="@string/text_inventory_management"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/sp_18"
+        android:textStyle="bold" />
+
+
+    <include
+        layout="@layout/view_recycler_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/mIl_BottomMenu"
+        android:layout_below="@id/mTv_TitleBar" />
+
+
+    <include
+        android:id="@+id/mIl_BottomMenu"
+        layout="@layout/return_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+
+</RelativeLayout>

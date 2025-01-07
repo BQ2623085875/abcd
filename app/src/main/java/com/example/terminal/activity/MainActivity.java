@@ -1,6 +1,8 @@
 package com.example.terminal.activity;
 
 import android.annotation.SuppressLint;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.RadioButton;
@@ -15,10 +17,14 @@ import com.example.terminal.base.BaseActivity;
 
 import com.example.terminal.fragment.HomeFragment;
 import com.example.terminal.fragment.MyFragment;
+import com.example.terminal.test.Locations;
 import com.example.terminal.util.CommonUtils;
 import com.example.terminal.util.FragmentUtils;
+import com.example.terminal.util.JsonUtils;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
@@ -90,6 +96,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         if (CommonUtils.isFastDoubleClick())
             return;
     }
+
     @Override
     protected void changeSystemUi() {
         CommonUtils.changeSystemUi(mActivity);
@@ -129,4 +136,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             return list.size();
         }
     }
+
+
 }

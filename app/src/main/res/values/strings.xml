@@ -22,6 +22,7 @@
     <string name="text_up_login">退出账号</string>
 
     <string name="text_warehouse_entry_processing">入库办理</string>
+    <string name="text_out_warehouse_entry_processing">出库办理</string>
     <string name="text_outbound_processing">出库办理</string>
     <string name="text_inventory_management">盘点管理</string>
     <string name="text_equipment_implementation">设备实施</string>
@@ -32,6 +33,10 @@
     <string name="text_save">保存</string>
     <string name="text_model">型号：</string>
     <string name="text_supplier">供应商：</string>
+    <string name="text_receiving_units_and_individuals">接收单位及个人：</string>
+    <string name="text_staff">人员：</string>
+    <string name="text_time">时间：</string>
+    <string name="text_describe">说明</string>
 
 
     <string name="text_change_password">修改密码</string>
@@ -187,7 +192,7 @@
 
     <string name="text_tug_nos">拖斗无需选择托盘</string>
 
-    <string name="text_be_verified">待审核</string>
+    <string name="text_be_verified">审核中</string>
     <string name="text_fail">未通过</string>
     <string name="text_passed">已通过</string>
 
